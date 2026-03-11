@@ -73,4 +73,41 @@ public class ProductsService {
         response.setStock(product.getStock());
         return response;
     }
+
+        * @param id       ID del producto
+     * @param cantidad Cantidad a sumar (debe ser > 0)
+     */
+    public ProductsResponseDTO increaseStock(Long id, Long cantidad) {
+        if (cantidad <= 0) {
+            throw new IllegalArgumentException("La cantidad debe ser mayor a 0");
+        }
+        Products product = productsRepository.findById(id)
+                .orElseThrow(() -> new RuntimeException("Producto no encontrado con id: " + id));
+        product.setStock(product.getStock() + cantidad);
+        return toResponse(productsRepository.save(product));
+    }
+
+      @param id       
+      @param cantidad
+    public ProductsResponseDTO decreaseStock(Long id, Long cantidad) {
+        if (cantidad <= 0) {
+            throw new IllegalArgumentException("La cantidad debe ser mayor a 0");
+        }
+        Products product = productsRepository.findById(id)
+                .orElseThrow(() -> new RuntimeException("Producto no encontrado con id: " + id));
+        if (product.getStock() < cantidad) {
+            throw new RuntimeException("Stock insuficiente. Stock actual: " + product.getStock());
+        }
+        product.setStock(product.getStock() - cantidad);
+        return toResponse(productsRepository.save(product));
+    }
+
+    private ProductsResponseDTO toResponse(Products product) {
+        ProductsResponseDTO response = new ProductsResponseDTO();
+        response.setId(product.getId());
+        response.setName(product.getName());
+        response.setPrice(product.getPrice());
+        response.setStock(product.getStock());
+        return response;
+    }
 }

@@ -53,4 +53,16 @@ public class ProductsController {
         productsService.deleteProduct(id);
         return ResponseEntity.noContent().build();
     }
+
+     @PatchMapping("/{id}/increase")
+    public ResponseEntity<ProductsResponseDTO> increaseStock(@PathVariable Long id,
+                                                             @RequestParam Long cantidad) {
+        return ResponseEntity.ok(productsService.increaseStock(id, cantidad));
+    }
+
+    @PatchMapping("/{id}/decrease")
+    public ResponseEntity<ProductsResponseDTO> decreaseStock(@PathVariable Long id,
+                                                             @RequestParam Long cantidad) {
+        return ResponseEntity.ok(productsService.decreaseStock(id, cantidad));
+    }
 }
