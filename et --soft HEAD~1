@@ -1,0 +1,14 @@
+[33m24a6aa1[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mfeature/gestion-compras[m[33m)[m Merge branch 'develop' into feature/gestion-compras
+[33m72d4d96[m Merge branch 'main' into feature/gestion-compras
+[33m78e532a[m[33m ([m[1;31morigin/develop[m[33m, [m[1;32mdevelop[m[33m)[m Merge pull request #5 from kariangelsilva/feature/gestion-stock-usuarios
+[33md346f3c[m[33m ([m[1;31morigin/feature/gestion-stock-usuarios[m[33m)[m feat: services y controller
+[33m084c8ed[m Merge pull request #4 from kariangelsilva/feature/crud-productos
+[33m756181c[m feat: Request, Response y repository
+[33me33f2e8[m feat: entity detalle compra
+[33md682ac2[m[33m ([m[1;31morigin/feature/crud-productos[m[33m)[m fix: crud
+[33mc173dd1[m agregar estructura de carpetas
+[33mcfc1f34[m Agregar estructura de carpetas faltante
+[33mab1314e[m[33m ([m[1;32mmain[m[33m)[m add folder structure
+[33m90ff964[m add folder structure
+[33m6b8a056[m feature/datos
+[33m934b2e8[m[33m ([m[1;31morigin/main[m[33m, [m[1;31morigin/feature/detalle-compra-inventario[m[33m, [m[1;31morigin/HEAD[m[33m, [m[1;32mfeature/gestion-stock-usuarios[m[33m, [m[1;32mfeature/detalle-compra-inventario[m[33m, [m[1;32mfeature/crud-productos[m[33m)[m first commit
